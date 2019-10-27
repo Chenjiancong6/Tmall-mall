@@ -1,0 +1,309 @@
+<!-- 确认收货页面-----2019.10.17--
+----- -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link
+      href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <title>确认收货页面</title>
+  </head>
+  <body>
+    <!-- 嵌入html页面代码 -->
+    <iframe
+      src="../Nav/nav.html"
+      width="100%"
+      height="50"
+      frameborder="0"
+      scrolling="no"
+    >
+      <a href="../Nav/nav.html"
+        >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+      >
+    </iframe>
+
+    <!-- 嵌入html页面代码 -->
+    <iframe
+      src="../Search/simpleSearch.html"
+      width="100%"
+      height="100"
+      frameborder="0"
+      scrolling="no"
+    >
+      <a href="../Search/simpleSearch.html"
+        >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+      >
+    </iframe>
+
+    <div class="confirmPayPageDiv">
+      <!-- 整个确认收货页面 -->
+      <div class="confirmPayImgDiv">
+        <img src="../Public_Filter/img/site/comformPayFlow.png" />
+        <!-- 三个的时间 -->
+        <div class="confirmPayTime1">2019-09-14 11:14:45</div>
+        <div class="confirmPayTime2">2019-09-14 11:14:47</div>
+        <div class="confirmPayTime2">yyyy-MM-dd HH:mm:ss</div>
+      </div>
+
+      <div class="confirmPayTest">我已收到货，同意支付宝付款</div>
+
+      <div class="confirmPayOrderInfo">订单信息</div>
+
+      <table class="confirmPayTable">
+        <thead>
+          <tr>
+            <th colspan="2">宝贝</th>
+            <th width="120px">单价</th>
+            <th width="120px">数量</th>
+            <th width="120px">商品总价</th>
+            <th width="120px">运费</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- tr -->
+          <tr>
+            <td>
+              <img
+                width="50px"
+                src="../Public_Filter/img/productSingle_middle/5848.jpg"
+                alt=""
+              />
+            </td>
+            <td class="confirmPayLink">
+              <a href="#nowhere"
+                >罗宾 钢带女表 女士腕表 水钻夜光防水石英表 潮流时尚复古手表女</a
+              >
+            </td>
+            <td>￥990.00</td>
+            <td>1</td>
+            <td><span class="confirmPayProductPrice">￥792.00</span></td>
+            <td>快递 ： 0.00</td>
+          </tr>
+
+          <!-- tr -->
+          <tr>
+            <td>
+              <img
+                width="50px"
+                src="../Public_Filter/img/productSingle_middle/3676.jpg"
+                alt=""
+              />
+            </td>
+            <td class="confirmPayLink">
+              <a href="#nowhere"
+                >科沃斯地宝凌云扫地机器人WiFi智能家用吸尘器超薄全自动洗擦地机</a
+              >
+            </td>
+            <td>￥990.00</td>
+            <td>1</td>
+            <td><span class="confirmPayProductPrice">￥792.00</span></td>
+            <td>快递 ： 0.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="confirmPayOrderItem pull-right">
+        实付款： <span class="confirmPayOrderItemSumPrice">￥4,484.00</span>
+      </div>
+
+      <!-- 下部分 -->
+      <div class="confirmPayDetailDiv">
+        <!-- 确认收货详情 -->
+        <table class="confirmPayDetailTable">
+          <tbody>
+            <tr>
+              <td>订单编号：</td>
+              <td>
+                201909141114454899001
+                <img
+                  src="../Public_Filter/img/site/confirmOrderTmall.png"
+                  width="23px"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>卖家昵称：</td>
+              <td>
+                天猫聪聪商铺
+                <span class="confirmPayOrderDetailWangWangGif"></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>收货信息：</td>
+              <td>
+                北京市 朝阳区 天安门 4栋二单元 490，朝阳群众，
+                15800000000，10000
+              </td>
+            </tr>
+
+            <tr>
+              <td>成交信息</td>
+              <td>2019-09-14 11:14:45</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="confirmPayButtonDiv">
+        <div class="confirmPayButtonInfo">
+          请收到货后，再确认收货！否则您可能钱货两空！
+        </div>
+        <a href="../other-page/orderFinish.html"
+          ><button class="confirmPayButton">确认收货</button></a
+        >
+      </div>
+    </div>
+
+    <!-- 嵌入html页面代码 -->
+    <iframe
+      src="../Footer/footer.html"
+      width="100%"
+      height="600"
+      frameborder="0"
+      scrolling="no"
+    >
+      <a href="../Footer/footer.html"
+        >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+      >
+    </iframe>
+  </body>
+
+  <!-- css上部分 -->
+  <style>
+    .confirmPayPageDiv {
+      /* 整体居中 */
+      margin: 20px auto;
+      max-width: 1013px;
+    }
+
+    .confirmPayImgDiv .confirmPayTime1,
+    .confirmPayTime2,
+    .confirmPayTime3 {
+      /* 订单时间 */
+      display: inline-block;
+      margin: 20px 50px 20px 0;
+    }
+
+    .confirmPayTest {
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px auto;
+      border-bottom: 1px solid #adc8e8;
+      padding-bottom: 15px;
+    }
+
+    .confirmPayOrderInfo {
+      /* 订单信息 */
+      font-size: 14px;
+      color: black;
+      margin: 20px 0;
+    }
+
+    .confirmPayTable thead {
+      background-color: #e8f2ff;
+      height: 36px;
+    }
+
+    .confirmPayTable tr {
+      border: 1px solid #dddddd;
+    }
+
+    .confirmPayTable th,
+    .confirmPayTable td {
+      text-align: center;
+    }
+
+    .confirmPayLink a {
+      color: #999;
+    }
+    .confirmPayLink a:hover {
+      text-decoration: none;
+      color: #c40000;
+    }
+
+    .confirmPayTable td {
+      /* table 单元格 */
+      padding: 20px;
+    }
+
+    .confirmPayProductPrice {
+      /* 商品价格 */
+      font-size: 18px;
+      color: #666666;
+      font-weight: bold;
+    }
+
+    .confirmPayOrderItem {
+      /* 实付款 */
+      margin: 20px 0;
+    }
+
+    .confirmPayOrderItemSumPrice {
+      color: #c40000;
+      font-size: 14px;
+    }
+  </style>
+
+  <!-- css下部分 -->
+  <style>
+    .confirmPayDetailDiv {
+      margin: 80px 0;
+    }
+    .confirmPayDetailTable {
+      /* 分割线 */
+      border-top: 1px solid #666666;
+      width: 100%;
+    }
+
+    .confirmPayDetailTable td {
+      padding: 20px 0;
+    }
+
+    .confirmPayOrderDetailWangWangGif {
+      /* 旺旺图标 */
+      background-image: url(../Public_Filter/img/site/wangwang.gif);
+      background-repeat: no-repeat;
+      background-color: transparent;
+      width: 67px;
+      height: 22px;
+      display: inline-block;
+    }
+
+    .confirmPayButtonDiv {
+      border: 1px solid #f58b0f;
+      margin: 20px;
+    }
+
+    .confirmPayButtonInfo {
+      color: red;
+      margin: 20px 80px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .confirmPayButton {
+      /* 确认支付按钮 */
+      margin: 20px 80px;
+      background-color: #f4a21d;
+      border-width: 0;
+      width: 67px;
+      height: 30px;
+      color: white;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+
+    button.confirmPayButton:hover {
+      background-color: #f6ae30;
+    }
+  </style>
+</html>

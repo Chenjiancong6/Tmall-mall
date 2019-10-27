@@ -1,0 +1,980 @@
+<!-- 产品页面----
+---产品图片:2019.9.25---
+---基本信息----2019.9.26----
+----js时间倒计时onload="countTime()"---2019-9-27--
+---加上页头和页脚部分---2019.9.29----
+--------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link
+      href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <title>产品页面(超级大哈克)</title>
+  </head>
+  <body onload="countTime()">
+    <!-- 嵌入页头html页面代码 -->
+    <iframe src="../nav/nav.html" width=100% height="30" frameborder="0" scrolling="no">
+      <a href="../nav/nav.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+    </iframe>
+
+    <!-- 嵌入简单搜索栏html页面代码 -->
+    <iframe src="../Search/simpleSearch.html" width=100% height="80" frameborder="0" scrolling="no">
+      <a href="../../Search/simpleSearch.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+    </iframe>
+
+    <div class="imgAndInfo">
+      <!-- 左边图片模块 -->
+      <div class="imgInimgAndInfo">
+        <img
+          src="../Public_Filter/img/productSingle/8619.jpg"
+          width="100px"
+          class="bigImage"
+        />
+        <div class="smallImageDiv">
+          <!-- 小图片Div -->
+          <img
+            src="../Public_Filter/img/productSingle_small/8620.jpg"
+            width="100px"
+            class="smallImage"  bigImageURL="../Public_Filter/img/productSingle/8620.jpg"
+          />
+          <img
+            src="../Public_Filter/img/productSingle_small/8619.jpg"
+            width="100px"
+            class="smallImage"  bigImageURL="../Public_Filter/img/productSingle/8619.jpg"
+          />
+          <img
+            src="../Public_Filter/img/productSingle_small/8618.jpg"
+            width="100px"
+            class="smallImage"  bigImageURL="../Public_Filter/img/productSingle/8618.jpg"
+          />
+          <img
+            src="../Public_Filter/img/productSingle_small/8617.jpg"
+            width="100px"
+            class="smallImage"  bigImageURL="../Public_Filter/img/productSingle/8617.jpg"
+          />
+          <img
+            src="../Public_Filter/img/productSingle_small/8616.jpg"
+            width="100px"
+            class="smallImage" bigImageURL="../Public_Filter/img/productSingle/8616.jpg"
+          />
+        </div>
+        <div class="img4load hidden"></div>
+      </div>
+      <!-- 右边基本信息模块 -->
+      <div class="infoInImgAndInfo">
+        <!--  -->
+        <div class="productTitle">
+          名媛2016新款女装夏两件套裤韩版雪纺七分裤阔腿裤休闲时尚套装女
+        </div>
+        <!--  -->
+        <div class="productSubTitle">
+          高端定制 高档棉麻 现货即发 加购物车 领优惠卷
+        </div>
+        <!--  -->
+        <div class="productPrice">
+          <!-- 一个大的Div -->
+          <div class="juhuasuan">
+            <span class="juhuasuanTitle">聚划算</span>
+            <span
+              >此商品将参加聚划算
+              <span class="juhuasuanTime" id="day"> 天</span>
+              <span class="juhuasuanTime" id="hours"> 时</span>
+              <span class="juhuasuanTime" id="minutes">分</span>
+              <span class="juhuasuanTime" id="seconds">秒</span>后开始时
+            </span>
+            <!-- js:时间倒计时 -->
+            <script>
+              function countTime() {
+                var date = new Date(); //获取当前时间
+                var now = date.getTime();
+                var endDate = new Date("3019-9-27 16:21:30"); //设置截止日期
+                var end = endDate.getTime();
+                var Time = end - now; //倒计时
+                var hours, days, minutes, seconds; //定义变量，保存倒计时时间
+
+                if (Time >= 0) {
+                  days = Math.floor(Time / 1000 / 60 / 60 / 24);
+                  hours = Math.floor((Time / 1000 / 60 / 60) % 24);
+                  minutes = Math.floor((Time / 1000 / 60) % 60);
+                  seconds = Math.floor((Time / 1000) % 60);
+                }
+                document.getElementById("day").innerHTML = days + "天";
+                document.getElementById("hours").innerHTML = hours + "时";
+                document.getElementById("minutes").innerHTML = minutes + "分";
+                document.getElementById("seconds").innerHTML = seconds + "秒";
+
+                //递归每秒调用countTime方法，显示动态时间效果
+                setTimeout(countTime, 1000);
+
+                //如果倒计时时间已到，则时间显示为0天0时，防止出现undefined天！
+                if (date >= endDate) {
+                  document.getElementById("day").innerHTML = "0天";
+                  document.getElementById("hours").innerHTML = "0时";
+                  document.getElementById("minutes").innerHTML = "0分";
+                  document.getElementById("seconds").innerHTML = "0秒";
+                }
+              }
+            </script>
+          </div>
+          <div class="productPriceDiv">
+            <div class="gouwuquanImg">
+              <img
+                alt="天猫购物券"
+                src="../Public_Filter/img//site/gouwujuan.png"
+                height="16px"
+              />
+              <span>全天猫实物商品通用</span>
+            </div>
+            <div class="originalDiv">
+              <!-- 原始的价格 -->
+              <span class="originalPriceDesc">价格</span>
+              <span class="originalPriceYuan">¥</span>
+              <span class="originalPrice">
+                399.00
+              </span>
+            </div>
+            <div class="promotionDiv">
+              <span class="promotionPriceDesc">促销价 </span>
+              <span class="promotionPriceYuan">¥</span>
+              <span class="promotionPrice">
+                379.05
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="SalesAndEvaluation">
+          <!-- 销量和评价Div -->
+          <div>销量 <span class="redColor boldWord"> 50</span></div>
+          <div>累计评价 <span class="redColor boldWord"> 19</span></div>
+        </div>
+        <div class="productNumber">
+          <!-- 产品数量 -->
+          <span>数量</span>
+          <span>
+            <!--一个大的span包裹-->
+            <span class="productInput">
+              <input type="text" value="1" class="spanInput" />
+            </span>
+            <span class="arrow">
+              <!--包裹上下增加按钮-->
+              <a href="javascript:void(0);" class="increaseNumber">
+                <span class="updown">
+                  <img src="../Public_Filter/img/site/increase.png" alt="" />
+                </span>
+              </a>
+              <span class="updownMiddle"></span>
+              <!--中间空白处-->
+              <a href="javascript:void(0);" class="decreaseNumber">
+                <span class="updown">
+                  <img src="../Public_Filter/img/site/decrease.png" alt="" />
+                </span>
+              </a>
+            </span>
+            件</span
+          >
+          <span>库存666件</span>
+        </div>
+        <div class="serviceCommitment">
+          <!-- 服务承诺：serviceCommitment -->
+          <span class="serviceCommitmentDesc">服务承诺</span>
+          <span class="serviceCommitmentLink">
+            <a href="#">正品保证</a>
+            <a href="#">极速退款</a>
+            <a href="#">赠送运费</a>
+            <a href="#">七天无理由退换</a>
+          </span>
+        </div>
+        <div class="buyDiv">
+          <a href="../settlement-page/settlement.html" target="_parent" class="buyLink">
+            <button class="buyButton">立即购买</button>
+          </a>
+          <a href="#" class="addCartLink">
+            <button class="addCartButton">
+              <span class="glyphicon glyphicon-shopping-cart"></span>
+              加购物车
+            </button>
+          </a>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+  
+    <!-- 产品详情模块 -->
+    <div class="productDetailDiv" style="display: block">
+
+      <div class="productDetailTopPart">
+        <!-- 标题div -->
+        <a href="javascript:void(0);" class="productDetailTapPartSelectLink selected">商品详情</a>
+        <a href="javascript:void(0);" class="productDetailLink">累计评价
+          <span class="productDetailLinkNumber">666</span>
+        </a> 
+      </div>
+      
+      <div class="productParamterpart">
+        <!-- 产品参数部分：Paramter -->
+        <div class="productParamter">产品参数:</div>
+        <div class="productParamterList">
+            <span>材质成分: 聚酯纤维100% </span>
+            <span>品牌: Emyche/艾米秋 </span>
+            <span>货号: 129668 </span>
+            <span>尺码: L M S XL X </span>
+            <span>上市年份季节: 2016年夏季 </span>
+            <span>颜色分类: 白色 黑色 浅蓝 </span>
+            <span>适用年龄: 18-25周岁 </span>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+
+    <div class="productDetailImagePart">
+      <img src="../Public_Filter/img/productDetail/8626.jpg" alt="">
+    </div> 
+    <div class="productDetailImagePart">
+      <img src="../Public_Filter/img/productSingle/8697.jpg" alt="">
+    </div>
+      </div>
+
+      <!-- 产品累计评价模块 -->
+       <div class="productPageDiv">
+            <div class="productReviewDiv" style="display: block">
+              <!-- 累计评价：Review -->
+               <div class="productReviewTopPart">
+                 <a href="javascript:void(0);" class="productReviewTopPartSelectedLink">
+                   商品详情
+                 </a>
+                 <a href="javascript:void(0);" class="selected">
+                   累计评价<span class="productReviewLinkNumber">666</span>
+                 </a>
+               </div>
+              <!--  -->
+       <div class="productReviewContentPart">
+                 <!-- 评价总的部分 -->
+                     <!-- 每个小部分评价分成3个div -->
+                 <div class="productReviewItem">
+
+                   <div class="productReviewItemDesc">
+                     <!--productReviewItemDesc:包括文字和日期  -->
+                       <div class="productReviewItemContent">
+                    不错的购物，包装很精细，布料也不错舒服，因为之前一直购买品牌装，
+                    很好的一次网购，生完宝宝刚刚一个多月我一百五十斤穿2XL不错
+                       </div>
+                       <div class="productReviewItemDate">2019-08-10</div>
+                   </div>
+
+                  <div class="productReviewItemUserInfo">
+                    <!-- 评价者的id -->
+                    哀****莉<span class="userInfoGrayPart">（匿名）</span>
+                  </div>
+                  
+                  <div style="clear: both"></div>
+                 </div>
+
+                 <!-- 每条评价信息 -->
+                <div class="productReviewItem">
+                  <div class="productReviewItemDesc">
+                    <div class="productReviewItemContent">
+                      面料很好，大小也刚刚好，本来买之前还担心，犹豫，等货到了，比我心中想象的好很多，大家放心购买，很满意的购物，以后还会来??
+                    </div>
+                    <div class="productReviewItemDate">2016-08-23</div>
+                  </div>
+                  <div class="productReviewItemUserInfo">
+                    贤*闲<span class="userInfoGrayPart">（匿名）</span>
+                  </div>
+                  <div style="clear:both"></div>
+                </div>
+              <!-- 每条评价信息 -->
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  <span>商品：</span>宝贝料子和手感都不错，是值这价，卖家很贴心的送了内衣带，5分好评是必须的。喜欢的可以 下手了
+                </div>
+                <div class="productReviewItemDate">2016-08-16</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                孤*****爱<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  衣服收到了，给朋友买的，真心不错，料子也特别好，穿起来特别有气质，跟模特穿的效果差不多。。。好评，好评
+                </div>
+                <div class="productReviewItemDate">2016-08-19</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                哀****莉<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  衣服不错，手感不错，试穿很有型，真心的喜欢，谢谢老板
+                </div>
+                <div class="productReviewItemDate">2016-07-19</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                孤*****爱<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  喜欢(⊙o⊙)哦，美美哒，值得一试！！！宽松雪纺，很舒服
+                </div>
+                <div class="productReviewItemDate">2016-08-10</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                这****0<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  衣服已经收到，大小很合适，面料也可以，就是感觉衣服面料有一点厚，其他都还不错，款式也好看，希望店家多出一点新款，以后回来光顾你们。?
+                </div>
+                <div class="productReviewItemDate">2016-07-10</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                y****心<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  很漂亮的衣服，料子有垂感，我很满意，老公也说好呢
+                </div>
+                <div class="productReviewItemDate">2016-07-27</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                阿*丶<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  真不错，已经迫不及待的穿上了，朋友们都说好，挺有气质的，就是上衣稍微有点肥，不过肉肉被藏起来了！有看上的赶紧下单吧！
+                </div>
+                <div class="productReviewItemDate">2016-08-12</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                名*****_<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  质量是真的不错，适合个子高一点的美眉穿，很漂亮?
+                </div>
+                <div class="productReviewItemDate">2016-08-03</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                安**°<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  再买的时候纠结了好久，最后还是选择在这里购买，一次满意的网购，让我对网购有了希望，或刚收到，因觉得物超所值，就迫不及待拍了照片，那个玻璃的声音非常脆，我个人觉得挺好的，值得拥有！
+                </div>
+                <div class="productReviewItemDate">2016-08-08</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                这****0<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  <span>服务：</span>不错
+                </div>
+                <div class="productReviewItemDate">2016-08-20</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                醉**心<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  强烈推荐，我的天，质量也太好了，让我情何以堪，大爱啊。说说我的体格吧，162.105斤，腰围大概是22，穿m码刚刚好。快递那么快，特地跟店家说10号要外出店家也尽心备注的很好。真的特别感动，我收藏店铺了，下次还来你们家。衣服比雪纺舒服，薄薄的，现在穿刚好，我配了高跟鞋和小白鞋都很完美。店家还送了无痕肩带，真的太细心了，给一百个好评，赞。衣服我看了没有线头，薄薄的。不说了，我赶紧发给我姐让她看看。
+                </div>
+                <div class="productReviewItemDate">2016-08-17</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                安**°<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  此用户没有填写评论！
+                </div>
+                <div class="productReviewItemDate">2016-07-21</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                乱**型<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  衣服质量真心不错很厚实，上身效果很棒哦，穿起来很舒服，很洋气。价格也很合理……赞赞赞
+                </div>
+                <div class="productReviewItemDate">2016-08-19</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                丶***眠<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  衣服裤子都很合身，同事笑我说这是我买得最好看最时尚的一套衣服，衣服上身效果也不错，很是满意，还送了隐形带，正好用上，质量很好穿着凉快，唯一不足的就是洗了后需要烫一下才不皱，不过不影响衣服的美，很满意。上传两张没P的照片
+                </div>
+                <div class="productReviewItemDate">2016-08-08</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                乱**型<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  不好意思好久才来评价 质量好 上身效果好 主要有胖子穿的漂亮衣服啦 赞赞赞
+                </div>
+                <div class="productReviewItemDate">2016-07-11</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                l******1<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  网购以来为数不多的质量好到超乎意料，穿上特别舒服，大小也正合适，超赞！这个店里值得好好逛逛！
+                </div>
+                <div class="productReviewItemDate">2016-07-10</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                盗**记<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+            <div class="productReviewItem">
+              <div class="productReviewItemDesc">
+                <div class="productReviewItemContent">
+                  宝贝面料很舒服，一字领也非常美，说实话是充上衣买的！犹豫了很长时间才下定决心的，很喜欢，很满意！喜欢就是最值的！
+                </div>
+                <div class="productReviewItemDate">2016-07-24</div>
+              </div>
+              <div class="productReviewItemUserInfo">
+                贤*闲<span class="userInfoGrayPart">（匿名）</span>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+               <!-- 评价部分-end -->
+               </div>
+            </div>
+       </div>
+
+      <!-- 嵌入页脚页面代码 -->
+      <iframe src="../Footer/footer.html" width=100% height="600" frameborder="0" scrolling="no">
+        <a href="../Footer/footer.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+      </iframe>
+
+
+    <!-- jquery代码 -->
+    <script>
+
+      //////显示缩略图效果
+      $("img.smallImage").mouseenter(function () {
+        //在小图片上有一个自定义属性bigImageURL，用于存放对应的图片的位置
+        var bigImageURL = $(this).attr("bigImageURL"); //绑定大图片地址
+        $("img.bigImage").attr("src", bigImageURL);  //更换大图片的地址
+      });
+      //大图片预加载
+      $("img.bigImage").load(
+        function () {
+          $("img.smallImage").each(function () {
+            var bigImageURL = $(this).attr("bigImageURL");
+            img = new Image();  //图片预加载函数
+            img.src = bigImageURL;
+
+            img.onload = function () {
+              console.log(bigImageURL);
+              $("div.img4load").append($(img));
+              //img对象加载完毕之后，放到被隐藏的div.img4load中，
+              //从而达到预加载的效果
+            }
+          })
+        }
+      );
+
+      ////////修改价格效果
+      var stock = 66;  //最大库存
+      $(".spanInput").keyup(function () {    //输入框
+        var num = $(".spanInput").val();  //监听输入的内容，并赋值给num;
+        num = parseInt(num);  //把非数字的输入去掉
+        if (isNaN(num))
+          num = 1;
+        if (num <= 0)
+          num = 1;
+        if (num > stock)
+          num = stock;
+        $(".spanInput").val(num);
+      })
+      //向上增加
+      $(".increaseNumber").click(function () {
+        var num = $(".spanInput").val();
+        num++;   //自增
+        if (num > stock)
+          num = stock;
+        $(".spanInput").val(num);
+      })
+      /////向下自减
+      $(".decreaseNumber").click(function () {
+        var num = $(".spanInput").val();
+        num--;  //自减
+        if (num <= 0)
+          num = 1;
+        $(".spanInput").val(num);
+      })
+
+      ///////切换商品详情和累计评价效果
+      $(function () {
+        $(".productReviewDiv").hide(); //先把评价模块隐藏；
+        $("a.productReviewTopPartSelectedLink").click(function(){
+          //点击详情模块时显示详情模块，隐藏累计评价模块
+          $(".productDetailDiv").show();
+          $(".productReviewDiv").hide();
+        })
+    ///点击累计模块时显示累计模块，隐藏详情模块
+       $(".productDetailLink").click(function(){
+         $(".productReviewDiv").show();
+           $(".productDetailDiv").hide();
+       }); 
+      })
+    </script>
+
+       <!-- 累计评价css -->
+       <style>
+       .productReviewTopPart{
+         /* 累计评价a链接边框线 */
+         border: 1px solid #9999;
+       }
+       .productReviewTopPartSelectedLink{
+         /* 商品评价超链 */
+         padding: 0 20px;
+         color: #333333
+       }
+
+        .productReviewContentPart{
+          /* 评价内容整个div */
+          padding-top: 50px;
+        }
+       .productReviewItem{
+         /* 每个评价 */
+         border-bottom: 1px solid #e3e3e3;
+         margin:10px 0; 
+
+       }
+       .productReviewItem .productReviewItemDesc{
+         /* 评价描述 */
+         display: block;
+         float: left;
+         width:80%;
+         margin: 5px 20px;
+         color: #333333;
+       }
+
+       .productReviewItemDate{
+         /* 评价日期 */
+         margin-top: 15px;
+         color: #cccc;
+       }
+
+       .productReviewItemUserInfo{
+         /* 用户信息 */
+         color: #404040;
+         padding: 20px 0;
+       }
+
+       .productReviewItem .userInfoGrayPart{
+         color: #9999;
+       }
+       </style>
+     
+    <!-- 产品详情部分css -->
+      <style>
+        .productDetailDiv,
+        .productPageDiv{
+          /* 产品详情,累计评价 */
+          width: 790px;
+          margin: 40px auto;
+        }
+
+        .productDetailDiv .productDetailTopPart{
+          /* 顶部a链接 */
+          border: 1px solid #9999;
+           border-left-width: 0px;
+        }
+        .productDetailTopPart a.selected,
+        .productReviewTopPart a.selected{
+          /* 累计评价超链 */
+          border-left: 1px solid #cfbfb1;
+           border-right: 1px solid #cfbfb1;
+           line-height: 46px;
+           color: #b10000;
+           display: inline-block;
+           font-weight: bold;
+           width: 90px;
+           text-align: center;
+           position: relative;
+           /* 相对定位，为的是下一步使用:before新增加的元素做绝对定位。
+            因为绝对定位是基于定位了的父元素 */
+        }
+        a.selected::before{
+          /* 使用:before为超链上方加一个天猫色的横条 */
+          content: "";  /*内容为空*/
+          border:1px solid #c40000;
+          display: block;
+          width:90px;
+          position: absolute;
+          left: 0px;
+          top: -1px;
+          margin-left: -1px;
+        }
+        a.selected:after{
+          /*  使用:after 为超链上方加一个天猫色的美人尖*/
+          content: "";
+          display: block;
+          border-color: #b00000 transparent transparent;
+           /* 美人尖的原理是只有上边框，其他边框是透明色，
+          #b00000 transparent transparent; 
+           这种写法既表示只有上边框有颜色，其他都是透明色 */
+           border-style: solid;
+           border-width: 5px;
+           width: 0;   /*为0时，只会显示出border：5px的宽度*/
+           height: 0;
+           position: absolute;
+           top:-1px;
+           left: 40%;
+        }
+
+        .productDetailLink{
+          /* 累计评论超链 */
+          padding: 0px 20px;
+          color: #3333;
+          border-right: 1px dotted #d2d2d2;
+        }
+        .productDetailLink span.productDetailLinkNumber{
+          /* 评论数量 */
+          color: #3355b9;
+        }
+
+        .productParamterpart{
+          /* 参数div */
+          padding: 40px;
+          border: 1px solid #dfdfdf;
+        }
+        .productParamter{
+          /* 参数四个字 */
+       color: #9999;
+       font-weight: bold;
+       margin-bottom: 20px;
+        }
+      .productParamterList span{
+        /* 产品参数列表 */
+        display: block;  
+        width: 220px;
+        float: left;
+        color: #6666;
+        padding: 8px 0;
+        }
+
+        .productDetailImagePart img{
+          /* 详情图片 */
+          margin:10px 0;
+          width:790px;
+          display: block;
+        }
+
+        .productDetailDiv a:hover,
+         .productReviewTopPart  a:hover{
+          text-decoration: none;
+          color:#c40000;
+        }
+      </style>
+
+
+
+    <!-- 右边部分css -->
+    <style>
+      .infoInImgAndInfo {
+        /* 右边基本信息 */
+        overflow: hidden;
+        padding: 40px 20px;
+      }
+      .infoInImgAndInfo .productTitle {
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+      .infoInImgAndInfo .productSubTitle {
+        color: #c40000;
+        font-size: 12px;
+        margin: 0 10px;
+      }
+
+      .productPrice .juhuasuan {
+        /* 聚划算 */
+        text-align: center;
+        background-color: #2da77a;
+        line-height: 40px;
+        margin-top: 10px;
+        color: white;
+      }
+      .infoInImgAndInfo .gouwuquanImg,
+      .originalDiv,
+      .promotionDiv {
+        margin-top: 5px;
+      }
+      .infoInImgAndInfo .juhuasuanTitle {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .productPrice .juhuasuanTime {
+        color: #c40000;
+        font-weight: bold;
+      }
+
+      .productPriceDiv {
+        background-image: url(../Public_Filter/img//site/priceBackground.png);
+        height: 108px;
+        padding: 10px;
+        color: #666666;
+      }
+
+      .originalDiv .originalPriceDesc {
+        /* 原始价格距离 */
+        display: inline-block;
+        width: 56px;
+      }
+      .originalDiv .originalPrice {
+        /* 原始价格-价格数字 */
+        text-decoration: line-through;
+        /* 删除线 */
+        font-size: 12px;
+        font-family: arial;
+        color: #333333;
+      }
+
+      .promotionDiv .promotionPriceYuan {
+        /* 促销价格 人民币标示 */
+        font-size: 18px;
+        color: #c40000;
+      }
+      .promotionDiv .promotionPrice {
+        /* 促销价格-价格数字 */
+        font-size: 30px;
+        color: #c40000;
+        font-weight: bold;
+        font-family: arial;
+      }
+      .promotionDiv .promotionPriceDesc {
+        /* 促销价格文字 */
+        display: inline-block;
+        width: 68px;
+        position: relative;
+        top: -10px;
+        left: 0;
+      }
+
+      .SalesAndEvaluation {
+        /* 销量和评价Div */
+        margin: 20px 0;
+        border-top-style: dotted;
+        border-top-color: #c9c9c9;
+        border-bottom-color: #c9c9c9;
+        border-bottom-style: dotted;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        padding: 10px;
+      }
+
+      .SalesAndEvaluation div {
+        /* 销量和累计评价分别的div */
+        display: inline-block;
+        text-align: center;
+        color: #999999;
+        font-size: 12px;
+        width: 49%; /* 让两个div分别各占一半*/
+      }
+      .SalesAndEvaluation div:first-child {
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: #e5dfda;
+      }
+
+      .productNumber .productInput {
+        /* 输入数字的input所在的span */
+        display: inline-block;
+        border: 1px solid #999;
+        width: 43px;
+        height: 32px;
+        padding-top: 7px;
+      
+      }
+      .productInput .spanInput {
+        /* 输入数字的input */
+        border: 0;
+        width: 80%;
+        height: 80%;
+          outline: none; 
+          /* 去掉输入边框 */
+      }
+
+      .productNumber span.updown img {
+        /* 上下箭头所使用的图片 */
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .productNumber span.updown {
+        /* 上下箭头所在的两个span */
+        display: block;
+        border: 1px solid #999;
+        width: 20px;
+        height: 14px;
+        text-align: center;
+        padding-top: 4px;
+      }
+      .productNumber .updownMiddle {
+        height: 4px;
+        display: block;
+      }
+
+      .productNumber span.arrow {
+        /* 上下箭头图标所在的span的父span */
+        display: inline-block;
+        width: 22px;
+        height: 32px;
+        vertical-align: top; /*垂直贴在上面*/
+      }
+
+      .serviceCommitment {
+        margin: 20px 0;
+      }
+
+      .serviceCommitment .serviceCommitmentDesc {
+        /* 服务承诺 */
+        color: #999999;
+      }
+      .serviceCommitment .serviceCommitmentLink a {
+        color: #6666;
+      }
+
+      .buyDiv {
+        /* 立即购买和加入购物车按钮 */
+        margin: 20px auto;
+        text-align: center;
+      }
+      .buyDiv button {
+        display: inline-block;
+        margin: 0 10px;
+        height: 40px;
+        width: 180px;
+      }
+      .buyDiv button.buyButton {
+        /* 立即购买按钮 */
+        border: 1px solid #c40000;
+        text-align: center;
+        color: #c40000;
+        background-color: #ffeded;
+        line-height: 40px;
+        font-size: 16px;
+      }
+      .buyDiv button.addCartButton {
+        /* 加入购物车按钮 */
+        border: 1px solid #c40000;
+        background-color: #c40000;
+        color: white;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+      }
+      button.addCartButton span.glyphicon {
+        /*加入购物车前的图标  */
+        font-size: 12px;
+        margin-right: 8px;
+      }
+
+      .imgAndInfo a:hover {
+        text-decoration: none;
+      }
+      .imgAndInfo .redColor {
+        /* 销量和累计评价后的数字 */
+        color: #c40000;
+      }
+      .imgAndInfo .boldWord {
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- 左边部分css -->
+    <style>
+      .imgInimgAndInfo {
+        /* 包含左边图片信息，和右边基本信息 */
+        margin: 40px 20px;
+      }
+      .imgInimgAndInfo {
+        /* 左边图片Div模块 */
+        width: 400px;
+        float: left;
+      }
+      .imgInimgAndInfo img.bigImage {
+        /*左边大图片 */
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        border: 1px solid #f2f2f2;
+      }
+
+      .imgInimgAndInfo .smallImageDiv {
+        width: 80%;
+        margin: 20px auto;
+      }
+      .smallImageDiv img.smallImage {
+        border: 2px solid white;
+        width: 60px;
+        height: 60px;
+      }
+      .smallImageDiv img.smallImage:hover {
+        border: 2px solid #000;
+      }
+    </style>
+  </body>
+</html>

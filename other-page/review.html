@@ -1,0 +1,325 @@
+<!-- 评价页面---2019.10.17----
+ ------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link
+      href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <title>评价页面</title>
+  </head>
+
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Nav/nav.html"
+    width="100%"
+    height="50"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Nav/nav.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Search/simpleSearch.html"
+    width="100%"
+    height="100"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Search/simpleSearch.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <body>
+    <div class="reviewDiv">
+      <!-- 整个评价页面 -->
+      <div class="reviewImgDiv">
+        <!-- 左边浮动div -->
+        <img
+          src="../Public_Filter/img/productSingle/8697.jpg"
+          alt="商品图片"
+          height="100px"
+          width="100px"
+          class="reviewImg"
+        />
+      </div>
+
+      <div class="reviewRightDiv">
+        <!-- 右边div -->
+        <div class="reviewRightText">
+          2016夏季新款女装雪纺衫短裤两件套 韩版时尚名媛休闲套装女夏装
+        </div>
+
+        <table class="reviewRightTable">
+          <tbody>
+            <tr>
+              <td>价格：</td>
+              <td><span class="reviewRightPrice">￥263.00</span>元</td>
+            </tr>
+
+            <tr>
+              <td>配送：</td>
+              <td>快递: 0.00</td>
+            </tr>
+
+            <tr>
+              <td>月销量：</td>
+              <td><span class="reviewRightSum">50</span>件</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="reviewRightBelowDiv">
+          <span class="reviewRightBelowImg">
+            <img src="../Public_Filter/img/site/reviewLight.png" alt="" />
+          </span>
+
+          <span class="reviewRighBelowText">
+            现在查看的是 您所购买商品的信息 于2019年09月12下单购买了此商品
+          </span>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+
+      <!-- 评价下部分 -->
+      <div class="reviewStasticsDiv">
+        <!-- 累计评价div :reviewStasticsDiv-->
+        <div class="stasticsLeft">
+          <!-- 左边 -->
+          <div class="stasticsLeftTop"></div>
+          <div class="stasticsLeftContent">
+            累计评价
+            <span class="reviewStasticsNumber"> 13</span>
+          </div>
+          <div class="stasticsLeftFoot"></div>
+        </div>
+
+        <div class="stasticsRight">
+          <!-- 右边 -->
+          <div class="stasticsRightEmpty"></div>
+          <div class="stasticsRightFoot"></div>
+        </div>
+      </div>
+
+      <div class="makeReviewDIv">
+        <!-- 填写评价内容栏 -->
+        <form action="post">
+          <div class="makeReviewText">其他买家，需要你的建议哦！</div>
+          <table class="makeReviewTable">
+            <tbody>
+              <tr>
+                <td class="makeReviewTD">评价商品</td>
+                <td><textarea name="content"></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="makeReviewButton">
+            <button type="button">提交评价</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Footer/footer.html"
+    width="100%"
+    height="600"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Footer/footer.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <!-- css上部分 -->
+  <style>
+    .reviewDiv {
+      /* 整个评价div */
+      margin: 20px auto;
+      max-width: 1013px;
+    }
+
+    .reviewImgDiv {
+      /* 左边浮动图片div */
+      float: left;
+      text-align: center;
+      width: 464px;
+      border: 1px solid #e7e7e7;
+    }
+
+    .reviewImgDiv .reviewImg {
+      width: 400px;
+      height: 400px;
+    }
+
+    .reviewRightDiv {
+      /* 右边大div */
+      border: 1px solid #e7e7e7;
+      padding: 30px 20px;
+      overflow: hidden;
+    }
+
+    .reviewDiv .reviewRightText {
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .reviewRightTable {
+      /* table栏 */
+      margin: 20px 10px;
+    }
+    .reviewRightTable td {
+      padding: 7px 20px;
+    }
+
+    .reviewRightTable .reviewRightPrice {
+      /* 产品价格 */
+      color: #c40000;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .reviewRightSum {
+      /* 月销量 */
+      color: #c40000;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .reviewRightBelowDiv {
+      /* 购买日期信息 */
+      border: 1px solid #f6f5f3;
+      background-color: #fdfbfa;
+      height: 166px;
+      padding: 25px 0 16px 80px;
+    }
+
+    .reviewRighBelowText {
+      border: 1px solid #eeeeee;
+      width: 250px;
+      height: 42px;
+      display: inline-block;
+      font-size: 12px;
+      position: relative;
+      top: 5px;
+      left: 5px;
+    }
+  </style>
+
+  <!-- css下部分 -->
+  <style>
+    .reviewStasticsDiv {
+      /*累计评价div */
+      margin-top: 20px;
+    }
+    .stasticsLeft {
+      /* 累计评价左侧 */
+      width: 180px;
+      float: left;
+    }
+    .stasticsLeftTop {
+      /* 累计评价左上div */
+      background-color: #c40000;
+      height: 6px;
+    }
+    .stasticsLeftContent {
+      /* 累计评价左边内容 */
+      line-height: 29px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      border-left: 1px solid #d5d4d4;
+      border-right: 1px solid #d5d4d4;
+      background-color: #f6f5f1;
+    }
+    .stasticsLeftFoot {
+      /* 累计评价左下div */
+      border-left: 1px solid #d5d4d4;
+      border-bottom: 1px solid #d5d4d4;
+      background-color: #f6f5f1;
+      height: 6px;
+      /* 设置height：6px ,出现小缺口 */
+    }
+
+    .stasticsRight {
+      /* 累计评价右侧div */
+      overflow: hidden;
+    }
+    .stasticsRightEmpty {
+      /* 累计评价右侧空白div */
+      height: 35px;
+      /* 6+29 */
+    }
+    .stasticsRightFoot {
+      /*累计评价右下div  */
+      background-color: #f6f5f1;
+      border: 1px solid #d5d4d4;
+      border-left-width: 0px;
+      height: 6px;
+    }
+
+    .makeReviewDIv {
+      /* 进行评价总div*/
+      border: 1px solid #d1ccc8;
+      background-color: #efefef;
+      margin: 20px 0;
+    }
+    .makeReviewText {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px 40px;
+    }
+
+    .makeReviewTable {
+      /* table评价商品表格 */
+      margin: 20px 40px;
+      font-size: 12px;
+    }
+
+    .makeReviewTable td {
+      border: 1px solid #e7e7e7;
+      padding: 10px;
+      background-color: white;
+    }
+
+    .makeReviewTable textarea {
+      resize: none;
+      /* 不可改变大小 */
+      border-width: 0;
+      width: 420px;
+      height: 120px;
+    }
+
+    .makeReviewButton {
+      background-color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .makeReviewButton button {
+      /* 提交按钮 */
+      width: 72px;
+      height: 26px;
+      font-weight: bold;
+      color: white;
+      border-radius: 4px;
+      background-color: #c40000;
+      border-width: 0;
+      /* 无边框 */
+    }
+  </style>
+</html>

@@ -1,0 +1,46 @@
+<!--天猫置顶公共导航栏页面-->
+<!--2019.9.17-->
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+  <link
+    href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="nav.css" />
+  <title>公共_置顶导航栏</title>
+</head>
+<html>
+  <body>
+    <nav class="top">
+      <a href="../all-Page/index.html" target="_parent">
+        <span class="glyphicon glyphicon glyphicon-home redColor"></span>
+        <!--引用bootstrap图标-->
+        天猫首页
+      </a>
+      <span>喵，欢迎来到天猫</span>
+      <a href="../other-page/Login.html" target="_parent">请先登录</a>
+      <a href="../other-page/register.html" target="_parent">免费注册</a>
+      <span class="pull-right">
+        <!--pull-right是bootstrap向右浮动的方法-->
+        <a href="../Order-page/order.html" target="_parent">我的订单</a>
+        <a href="../shopping-cart/cart.html" target="_parent">
+          <span class="glyphicon glyphicon-shopping-cart redColor"></span>
+          购物车<strong>0</strong>件</a
+        >
+      </span>
+    </nav>
+  </body>
+
+  <script>
+    $("a[href]").click(function() {
+      var href = $(this).attr("href");
+      if ("#nowhere" == href || "#" == href) {
+        alert("很抱歉，站长在拼命开发中，此链接暂不可用 ┭┮﹏┭┮");
+      }
+    });
+  </script>
+</html>

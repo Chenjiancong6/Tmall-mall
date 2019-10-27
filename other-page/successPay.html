@@ -1,0 +1,149 @@
+<!-- 成功支付页面---
+    -2019.10.16----
+----- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link
+      href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <title>成功支付页面</title>
+  </head>
+
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Nav/nav.html"
+    width="100%"
+    height="50"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Nav/nav.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Search/simpleSearch.html"
+    width="100%"
+    height="100"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Search/simpleSearch.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <body>
+    <div class="successPayedDiv">
+      <div class="payedDiv">
+        <!-- 成功付款 -->
+        <img src="../Public_Filter/img/site/paySuccess.png" />
+        <span>您已成功付款</span>
+      </div>
+
+      <div class="payAndAddressInfo">
+        <!-- 买家收货地址 -->
+        <ul class="addressUl">
+          <li>收货地址： 北京市 朝阳区 天安门 中南海 2单元 233室</li>
+          <li>实付款：<span class="payPrice">￥6,66.66</span></li>
+          <li>预计08月08日送达</li>
+        </ul>
+
+        <div class="payedCheckLink">
+          您可以
+          <a href="../Order-page/order.html" target="_parent"
+            >查看已买到的宝贝</a
+          >
+          <a href="../Order-page/order.html" target="_parent">查看交易情况</a>
+        </div>
+      </div>
+
+      <div class="payedLine">
+        <!-- 增加下划线效果 -->
+      </div>
+
+      <div class="payedWarning">
+        <!-- 安全提示 -->
+        <img src="../Public_Filter/img/site/warning.png" />
+        <b>安全提醒</b>下单后,
+        <span class="redColor">用QQ给您发送链接办理退款的都是骗子！</span
+        >天猫不存在系统升级，订单异常等问题，谨防假冒客服电话诈骗！
+      </div>
+    </div>
+
+    <!-- 嵌入html页面代码 -->
+    <iframe
+      src="../Footer/footer.html"
+      width="100%"
+      height="600"
+      frameborder="0"
+      scrolling="no"
+    >
+      <a href="../Footer/footer.html"
+        >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+      >
+    </iframe>
+  </body>
+
+  <!-- css -->
+  <style>
+    .successPayedDiv {
+      /* 整个DIv */
+      border: 1px solid #d4d4d4;
+      max-width: 1013px;
+      margin: 10px auto 20px auto;
+    }
+
+    .successPayedDiv .payedDiv {
+      /* 成功付款 */
+      background-color: #ecffdc;
+      line-height: 71px;
+      padding: 0 15px;
+    }
+
+    .payAndAddressInfo {
+      margin: 30px 20px;
+    }
+    .payAndAddressInfo .addressUl li {
+      /* 收货地址li */
+      padding: 10px 0;
+    }
+
+    .addressUl .payPrice {
+      /* 实付款价格 */
+      color: #c40000;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .payedCheckLink {
+      /* 链接 */
+      margin: 0 20px;
+    }
+
+    .successPayedDiv .payedLine {
+      /* 下划线 */
+      border-top: 1px dotted #d4d4d4;
+    }
+
+    .payedWarning {
+      margin: 25px 45px;
+      color: #000;
+    }
+    .payedWarning .redColor {
+      color: #c40000;
+      font-weight: bold;
+    }
+  </style>
+</html>

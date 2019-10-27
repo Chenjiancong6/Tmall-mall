@@ -1,0 +1,553 @@
+<!-- settlement:结算----
+2-----019.10.10 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link
+      href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <title>结算页面</title>
+  </head>
+  <body>
+
+<!-- 嵌入html页面代码 -->
+<iframe src="../Nav/nav.html" width="100%" height="50" frameborder="0" scrolling="no">
+    <a href="../Nav/nav.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+</iframe>
+
+    <div class="settlement">
+      <div class="headAndAddress">
+        <!-- 头部和收货地址 -->
+        <div class="buy_image">
+          <img
+            class="pull-left"
+            src="../Public_Filter/img/site/simpleLogo.png"
+            alt="天猫"
+          />
+          <img
+            class="pull-right"
+            src="../Public_Filter/img/site/buyflow.png"
+            alt="购物流程"
+          />
+          <div style="clear: both"></div>
+        </div>
+
+        <!-- 收货信息 -->
+        <div class="address">
+          <div class="addressTip">输入收货地址</div>
+          <div>
+            <form action="../other-page/alipay.html" id="addressFrom" method="get">
+            <table class="addressTable">
+              <tbody>
+
+                <tr>
+                  <label for="address">
+                  <td class="firstColumn">
+                    详细地址<span class="redStar">*</span>
+                  </td>
+                </label>
+
+                  <td>
+                    <textarea
+                    id="address"
+                      name="address"
+                      placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息"
+                    ></textarea>
+                  </td>
+                </tr>
+
+                <tr>
+                  <label for="post">
+                  <td>邮政编码</td>
+                </label>
+                  <td>
+                    <input
+                      type="text"
+                      placeholder="如果您不清楚邮递区号，请填写000000"
+                      name="post"
+                      id="post"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <label for="whoname">
+                  <td>收货人姓名<span class="redStar">*</span></td>
+                </label>
+                  <td>
+                    <input type="text" 
+                    id="whoname"
+                    name="whoname"
+                    placeholder="长度不超过25个字符" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <label for="whonumber">
+                  <td>手机号码<span class="redStar">*</span></td>
+                </label>
+                  <td>
+                    <input type="text"
+                    id="whonumber"
+                    name="whonumber"
+                    placeholder="请输入11位手机号码" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+         
+          </div>
+        </div>
+      </div>
+
+      <div class="confirmOrder">
+        <!-- 确认订单信息 -->
+        <div class="confirmOrderTip">确认订单</div>
+        <div class="confirmOrderList">
+          <table class="confirmOrderListTable">
+            <thead>
+              <tr>
+                <td class="firstColumn" colspan="2">
+                  <img src="../Public_Filter/img/site/tmallbuy.png" alt="" />
+                  <a href="#" class="markeLink">店铺：天猫店铺</a>
+                  <a href="#" class="wangwangLink"
+                    ><sapn class="wangwangGif"></sapn
+                  ></a>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>配送方式</th>
+                </td>
+              </tr>
+              <tr class="rowBorder">
+                  <!-- 小边框条 -->
+           <td colspan="2"></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+              </tr>
+            </thead>
+            <tbody class="confirmOrderTbody">
+                <tr class="confirmOrderTR">
+                    <td class="confirmFirstTD">
+                        <img class="confirmImg" src="../Public_Filter/img/productSingle_middle/4206.jpg" width="50px">
+                    </td>
+                    <td class="confirmOrderInfo">
+                        <div class="confirmLinkAndImg">
+                            <a class="confirmInfoLink "href="#">Philips/飞利浦 HR1897/30破壁微榨原汁机 多功能家用果汁榨汁机</a>
+                            <div class="confirmInfoImg">
+                                <img src="../Public_Filter/img/site/creditcard.png"title="支持信用卡支付" >
+                                <img src="../Public_Filter/img/site/7day.png"  title="消费者保障服务,承诺7天退货">
+                                <img src="../Public_Filter/img/site/promise.png" title="消费者保障服务,承诺如实描述">
+                            </div>
+                        </div>
+                    </td> 
+                    <td>
+                        <span class="confirmOrderPrice">￥3,556.34</span>
+                    </td>
+                    <td>
+                        <sapn class="confirmOrderNumber">2</sapn>
+                    </td>
+                    <td>
+                        <span class="confirmOrderSum">￥7,032.68</span>
+                    </td>
+                    <td class="confirmorderLastTD" rowspan="5">
+                        <!-- 配送方式和运费选择 -->
+                        <label  class="orderItemDeliveryLabel">
+                            <input type="radio"  value="">
+                          普通配送  
+                        </label>
+                        <select  class="orderItemDeliverySelect">
+                            <option value="">快递 免运费</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- 第二个tr -->
+                <tr class="confirmOrderTR">
+                    <td class="confirmFirstTD">
+                        <img class="confirmImg" 
+            src="../Public_Filter/img/productSingle_middle/3796.jpg" width="50px">
+                    </td>
+                    <td class="confirmOrderInfo">
+                        <div class="confirmLinkAndImg">
+                            <a class="confirmInfoLink " href="#">
+    公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器
+    </a>
+                            <div class="confirmInfoImg">
+                                <img src="../Public_Filter/img/site/creditcard.png" title="支持信用卡支付">
+                                <img src="../Public_Filter/img/site/7day.png" title="消费者保障服务,承诺7天退货">
+                                <img src="../Public_Filter/img/site/promise.png" title="消费者保障服务,承诺如实描述">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="confirmOrderPrice">￥6,666.34</span>
+                    </td>
+                    <td>
+                        <sapn class="confirmOrderNumber">1</sapn>
+                    </td>
+                    <td>
+                        <span class="confirmOrderSum">￥23,333.68</span>
+                    </td>
+                </tr>
+
+                <!-- 第三个tr -->
+                <tr class="confirmOrderTR">
+                    <td class="confirmFirstTD">
+                        <img class="confirmImg" src="../Public_Filter/img/productSingle_middle/5848.jpg" width="50px">
+                    </td>
+                    <td class="confirmOrderInfo">
+                        <div class="confirmLinkAndImg">
+                            <a class="confirmInfoLink " href="#">
+                                时尚手表女生手表女神必备电子表限量首发带上就是白富美最新款
+                            </a>
+                            <div class="confirmInfoImg">
+                                <img src="../Public_Filter/img/site/creditcard.png" title="支持信用卡支付">
+                                <img src="../Public_Filter/img/site/7day.png" title="消费者保障服务,承诺7天退货">
+                                <img src="../Public_Filter/img/site/promise.png" title="消费者保障服务,承诺如实描述">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="confirmOrderPrice">￥1,210.00</span>
+                    </td>
+                    <td>
+                        <sapn class="confirmOrderNumber">3</sapn>
+                    </td>
+                    <td>
+                        <span class="confirmOrderSum">￥3.630.00</span>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+
+          <div class="confirmSumDiv">
+              <span class="pull-left">给卖家留言：
+                  <textarea cols="20" rows="1" placeholder="选填：对本次交易的说明(建议填写已和卖家沟通好的内容)"></textarea>
+                </span>
+                <span class="pull-right">
+                    店铺合计(含运费)：￥9,876.78
+                </span>
+          </div>
+         
+          <div class="confirmTotalSum">
+          <div class="pull-right">
+              <span class="confirmOrdertitle">实付款：</span>
+              <sapn class="confirmOrderTotalSum">￥9,876.78</sapn>
+          </div>
+        </div>
+
+          <div class="confirmOrderButton">
+           <a href="../other-page/alipay.html"> 
+      <button class="submitOrderButton"  type="submit">提交订单</button>
+          </a>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+      </div>
+    </div>
+ </form>
+    <!-- 嵌入html页面代码 -->
+    <iframe src="../Footer/footer.html" width="100%" height="600" frameborder="0" scrolling="no">
+        <a href="../Footer/footer.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+    </iframe>
+  </body>
+
+<!-- js表单验证 -->
+<script>
+  $.validator.setDefaults({
+    submitHandler: function () {
+      alert("提交订单完成！");
+      window.location.href="../other-page/alipay.html";
+    }
+  });
+  $().ready(function () {
+// 在键盘按下并释放及提交后验证提交表单
+   $("#addressFrom").validate({
+     rules:{
+       address:{
+         required:true,
+         minlength:10,
+         maxlength:20
+       },
+       post:{
+         required:true,
+         minlength:6
+       },
+       whoname:{
+         required:true,
+         minlength:2,
+         maxlength:25
+       },
+       whonumber:{
+         required:true,
+         minlength:11,
+         maxlength:11
+       }
+     },
+     messages:{
+       address: {
+         required: "输入收货地址",
+         minlength: "收货地址不能小于10个字母",
+         maxlength: "收货地址不能大于20个字母"
+       },
+        post: {
+         required: "输入正确的邮政编码",
+         minlength: "不能小于6个数字"
+       },
+        whoname: {
+         required:"输入正确的名字格式",
+         minlength: "不能小于两个字母",
+         maxlength:"不能大于25个字母"
+       },
+        whonumber: {
+         required: "输入正确的手机号码格式",
+         minlength:"号码不能小于11个字母",
+         maxlength:"不能大于11个字母"
+       }
+     }     
+   });
+  }); 
+
+</script>
+<style>
+  .error {
+    color: #c40000;
+  }
+</style>
+
+<script>
+ $(function(){
+     $(".confirmSumDiv textarea").click(function(){
+         var height=$(this).height(); //获取当前点击的属性
+         if(height<=25){
+          $(".confirmSumDiv textarea").css("height","50px");
+          $(".confirmSumDiv").css("height","100px"); 
+          //背景颜色增加高度
+          }else{
+               $(".confirmSumDiv textarea").css("height", "25px");
+                $(".confirmSumDiv").css("height", "50px");
+          };
+          
+     });
+     
+ })
+</script>
+
+  <!--确定订单信息 css -->
+  <style>
+  .confirmOrder{
+      /* 确认订单整体 */
+      margin: 30px 0;
+  }
+  .confirmOrderTip{
+      /* 订单提示 */
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 30px;
+        }
+    .confirmOrderListTable{
+        /* 表格 table */
+        width: 100%;
+    border-collapse: separate;
+    font-size: 12px;
+    /* 边框折叠 */
+    }
+    .confirmOrderListTable .firstColumn img{
+        /* 天猫logo */
+        width: 16px;
+    }
+    .firstColumn .markeLink{
+        color: #0c0000;
+        
+    }
+
+    .confirmOrderListTable th{
+        /* th,必须引用table的父类才能起作用 */
+        padding-bottom: 5px;
+        text-align: center;
+        color: #9999;
+    }
+
+    .wangwangGif{
+        /* 旺旺图标 */
+        width: 25px;
+        height: 25px;
+        background-image:url(../Public_Filter/img/site/wangwang.gif);
+        display: inline-block;
+        /* 设置内联样式，为图标提供显示空间 */
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-attachment: scroll;
+        background-position: -83px -0px;
+        position: relative;
+        top: 10px;
+        left: 2px;
+    }
+ 
+     .confirmOrderListTable .rowBorder td{
+         /* 小边框条 */
+     background-color: #b2d1ff;
+     border-right:2px solid #fff;
+     /* 使每个td小边框条有空隙 */
+     height: 3px;
+     }
+   
+   .confirmOrderListTable .confirmOrderTbody td{
+       /* tbody部分td */
+      text-align: center;
+   }
+
+   .confirmOrderTR td{
+       /*各个tr下的td */
+       border-bottom: 1px solid #e5e5e5;
+       padding: 10px 0;
+   }
+   .confirmFirstTD,
+   .confirmorderLastTD{
+   /* tr中第一列和最后一列，去掉多余边框 */
+   border-bottom: 0px solid black !important;
+   }
+
+   .confirmLinkAndImg{
+       /* 商品订单信息 */
+       padding-right:350px;
+       display: inline-block;
+   }
+.confirmInfoImg{
+ padding-right:290px;
+ display: inline-block;
+}
+.confirmInfoImg img{
+height: 16px;
+}
+
+.confirmImg{
+    /* 产品信息图片 */
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e9e9e9;
+}
+
+.confirmOrderSum{
+    /* 产品小计 */
+    color: #cc0000;
+    font-weight: bold
+}
+
+.orderItemDeliveryLabel{
+    /* label部分 */
+    color: #666666;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.confirmSumDiv{
+    /* table下面的卖家留言div */
+    background-color: #f2f6ff;
+    border-top: 2px solid #b4d0ff;
+    height: 50px;
+    padding-top: 13px;
+}
+.confirmSumDiv textarea{
+    /* textarea */
+    resize: none;
+    height: 25px;
+    
+}
+
+.confirmTotalSum{
+    /* 实付款 */
+    margin: 40px;
+    height: 40px;
+}
+.confirmOrderTotalSum{
+    /* 实付款价格 */
+    font-size: 20px;
+    font-weight: bold;
+    color: #c40000;
+}
+
+.confirmOrderButton{
+    float:right;
+   
+}
+.submitOrderButton{
+    /* 提交按钮 */
+    margin: 0 10px;
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    color: white;
+    background-color: #c40000;
+    border: 1px solid #c40000;
+    text-align: center;
+    font-weight: bold;
+
+
+}
+  </style>
+
+  <!-- 头部和收货地址 css-->
+  <style>
+    .settlement {
+      /* 整体 */
+      margin: 20px auto;
+      max-width: 1013px;
+    }
+    .address {
+      margin: 10px 5px;
+    }
+    .address .addressTip {
+      /* 收货地址提示 */
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .addressTable {
+      /* 表格 */
+      width: 600px;
+      font-size: 12px;
+      margin: 20px 20px;
+    }
+    .addressTable td {
+      /* td */
+      text-align: left;
+      /* 向左对齐 */
+      padding-right: 5px;
+      height: 30px;
+      vertical-align: top;
+    }
+
+    .addressTable .redStar {
+      /* 红色小星星 */
+      color: red;
+    }
+    .addressTable td.firstColumn {
+      /* 第一列 */
+      width: 100px;
+    }
+
+    .addressTable td textarea {
+      /* 输入文本框 */
+      width: 400px;
+      margin-bottom: 10px;
+      resize: none;
+      /* 限制缩放 */
+    }
+    .addressTable td input {
+      width: 200px;
+    }
+  </style>
+</html>

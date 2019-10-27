@@ -1,0 +1,220 @@
+<!-- 注册页面--
+    ---2019.10.16 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+
+    <title>注册页面</title>
+  </head>
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Nav/nav.html"
+    width="100%"
+    height="50"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Nav/nav.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Search/simpleSearch.html"
+    width="100%"
+    height="100"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Search/simpleSearch.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <body>
+    <div class="registerDiv">
+      <form method="get" class="registerClss" id="registerForm" action="">
+        <table class="registerTable">
+          <tbody>
+            <tr>
+              <td class="registerTip registerTableLeftTD">设置会员名</td>
+            </tr>
+
+            <tr>
+              <td class="registerTableLeftTD">
+                <label for="username"></label>登录名</label>
+              </td>
+              <td class="registerTableRightTD">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="会员名一旦设置成功，无法修改"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="registerTableLeftTD">
+                <label for="password">密码</label>
+              </td>
+              <td class="registerTableRightTD">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="设置你的登录密码"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="registerTableLeftTD">
+                <label for="confirm_password">密码确认</label>
+              </td>
+              <td class="registerTableRightTD">
+                <input
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  placeholder="请再次输入你的密码"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="registerButtonTD">
+                <a href="../other-page/Login.html">
+                  <button class="submit" type="submit">提交</button>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+    <!-- js表单验证-->
+    <script>
+      $.validator.setDefaults({
+        submitHandler: function() {
+          alert("注册成功！");
+          window.location.href="../other-page/Login.html";
+        }
+      });
+
+      $().ready(function() {
+        // 在键盘按下并释放及提交后验证提交表单
+        $("#registerForm").validate({
+          rules: {
+            username: {
+              required: true,
+              minlength: 2
+            },
+            password: {
+              required: true,
+              minlength: 5
+            },
+            confirm_password: {
+              required: true,
+              minlength: 5,
+              equalTo: "#password"
+            },
+          },
+          messages: {
+            password: {
+              required: "请输入密码",
+              minlength: "密码长度不能小于 5 个字母"
+            },
+            confirm_password: {
+              required: "请再次输入密码",
+              minlength: "密码长度不能小于 5 个字母",
+              equalTo: "两次密码输入不一致"
+            },
+          }
+        });
+      });
+    </script>
+<style>
+  .error {
+    color:#c40000;
+  }
+</style>
+    <!-- 嵌入html页面代码 -->
+    <iframe
+      src="../Footer/footer.html"
+      width="100%"
+      height="600"
+      frameborder="0"
+      scrolling="no"
+    >
+      <a href="../Footer/footer.html"
+        >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+      >
+    </iframe>
+  </body>
+
+  <!-- css -->
+  <style>
+    .registerDiv {
+      /* 整个注册页面 */
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .registerDiv .registerTable {
+      /*注册表 */
+      margin: 0 auto;
+      color: #3c3c3c;
+      table-layout: fixed;
+      /*表格布局，单元格的宽度取设置的值  */
+      font-size: 16px;
+    }
+
+    .registerTable td {
+      padding: 20px 10px;
+    }
+
+    .registerTableLeftTD {
+      /* 左边的td */
+      text-align: right;
+    }
+
+    .registerTable input {
+      /* 输入框 */
+      width: 213px;
+      height: 36px;
+      font-size: 14px;
+      border: 1px solid #dedede;
+      outline: none;
+    }
+
+    .registerTip {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .registerTable button {
+      /* 提交按钮 */
+      width: 170px;
+      height: 36px;
+      background-color: #c40000;
+      border-width: 0;
+      /* 没有边框 */
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    .registerButtonTD {
+      text-align: center;
+    }
+  </style>
+</html>

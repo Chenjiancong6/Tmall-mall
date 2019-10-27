@@ -1,0 +1,231 @@
+<!-- 登录页面---
+---2019.10.16--- -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link
+      href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <title>登录页面</title>
+  </head>
+  <body>
+    <form action="../all-Page/home_page.html" id="loginFrom" method="get"></form>
+      <div class="loginDiv">
+        <!-- 整个登录界面 -->
+        <div class="simplelogo">
+          <img src="../Public_Filter/img/site/simpleLogo.png" />
+        </div>
+
+        <img
+          src="../Public_Filter/img/site/loginBackground.png"
+          alt="登录背景图片"
+          class="loginbackground"
+        />
+
+        <div class="loginSmallDiv">
+          <!--登录框 -->
+          <div class="loginText">账号登录</div>
+
+          <div class="loginInput">
+            <!-- 第一个输入框 -->
+            
+              <span class="loginInputIcon">
+                <label for="username">
+                <span class=" glyphicon glyphicon-user"></span>
+              </label>
+              </span>
+            </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="手机/邮箱/会员名"
+            />
+          </div>
+
+          <div class="loginInput">
+            <!-- 第二个输入框 -->
+            
+              <span class="loginInputIcon"><label for="password">
+                <span class=" glyphicon glyphicon-lock"></span></label> 
+                </span>
+            <input
+              type="password"
+              id="password"
+              placeholder="密码"
+              name="password"
+            />
+          </div>
+
+          <div>
+            <a href="#" class="notLoginPsw">忘记登录密码</a>
+            <a href="../other-page/register.html" class="pull-right"
+              >免费注册</a
+            >
+          </div>
+  
+          <div>
+            <!-- 登录按钮 -->  
+         <a href="../all-Page/index.html"  target="_parent">
+            <button class="btn btn-block redButton" type="submit">登录</button>
+        </a>  
+      </div> 
+        
+        </div>
+      </div>
+    </form>
+  </body>
+
+  <!-- css -->
+
+  <style>
+    .loginDiv {
+      /* 整个登录界面 */
+      margin: 20px auto;
+    }
+    .loginDiv .simplelogo {
+      padding: 20px 0;
+    }
+
+    .simplelogo {
+      margin: 0 0 0 20px;
+    }
+
+    .loginbackground {
+      /* 背景图片 */
+      display: block;
+      /* 设置块元素，使margin能发挥作用 */
+      margin: 0px auto;
+    }
+
+    .loginSmallDiv {
+      /* 登录栏 */
+      background-color: white;
+      width: 350px;
+      height: 400px;
+      position: absolute !important;
+      /* 绝对定位以自己为中心 */
+      top: 170px;
+      /* 距离顶部170px */
+      right: 180px;
+      padding: 60px 25px 80px 25px;
+    }
+
+    .loginSmallDiv .loginText {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .loginSmallDiv .loginInput {
+      /* 两个输入框 */
+      border: 1px solid #cbcbcb;
+      margin: 20px 0;
+    }
+
+    .loginInput .loginInputIcon {
+      /* 图标span */
+      width: 40px;
+      height: 40px;
+      background-color: #cbcbcb;
+      display: inline-block;
+      /* 块元素使宽高值有效 */
+      margin: 0;
+    }
+
+    .loginInputIcon .glyphicon {
+      /* 用户和密码图标 */
+      font-size: 22px;
+      top: 9px;
+      left: 9px;
+    }
+    .loginInput input {
+      /* 两个input */
+      border: 0px solid transparent;
+      /* 无边框 */
+      width: 245px;
+      height: 30px;
+      position: relative;
+      display: inline-block;
+      top: 4px;
+      left: 6px;
+      outline: none;
+    }
+
+    .loginDiv a {
+      color: #999;
+    }
+    .loginDiv a:hover {
+      text-decoration: none;
+      color: #c40000;
+    }
+
+    .loginDiv button.redButton {
+      /* 登录按钮 */
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #c40000;
+      margin-top: 20px;
+    }
+  </style>
+
+  <!-- 嵌入html页面代码 -->
+  <iframe
+    src="../Footer/footer.html"
+    width="100%"
+    height="600"
+    frameborder="0"
+    scrolling="no"
+  >
+    <a href="../Footer/footer.html"
+      >你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a
+    >
+  </iframe>
+
+  <!---------------
+  <script>
+   $.noConflict();
+   $.validator.setDefaults({
+      submitHandler: function() {
+        alert("登录成功!，开始愉快的购物之旅吧 (#^.^#)");
+        window.location.href = "../all-Page/home_page.html";
+      }
+    });
+   $().ready(function() {
+      // 在键盘按下并释放及提交后验证提交表单
+     $("#loginForm").validate({
+        rules: {
+          username: {
+            required: true,
+            minlength: 2
+          },
+          password: {
+            required: true,
+            minlength: 5
+          }
+        },
+        messages: {
+          password: {
+            required: "请输入密码",
+            minlength: "密码长度不能小于 5 个字母"
+          }
+        }
+      });
+    });
+  </script>
+  <style>
+    .error {
+      color: #c40000;
+    }
+  </style>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+-->
+</html>

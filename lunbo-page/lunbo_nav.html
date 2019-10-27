@@ -1,0 +1,205 @@
+<!-- 
+天猫首页轮播模块----
+----2019.9.20----
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../Public_Filter/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link
+      href="../Public_Filter/study/css/bootstrap/3.3.6/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <title>天猫首页轮播模块</title>
+  </head>
+  <body>
+    <div style="height:50px"></div>
+    <img
+      class="catear"
+      id="catear"
+      src="../Public_Filter/img/site/catear.png"
+    />
+    <div class="categoryWithCarousel">
+      <!-- categoryWithCarousel：分类和轮播总体 -->
+      <div class="headbar">
+        <!-- 导航条：headbar -->
+        <div class="head">
+          <!-- 左边导航条 -->
+          <span
+            class="glyphicon glyphicon-th-list"
+            style="margin-left:10px"
+          ></span>
+          <span style="margin-left:10px">商品分类</span>
+        </div>
+        <div class="rightMenu">
+          <!-- 右边导航条 -->
+          <span
+            ><a href="#nowhere"
+              ><img src="../Public_Filter/img/site/chaoshi.png"/></a
+          ></span>
+          <span
+            ><a href="#nowhere"
+              ><img src="../Public_Filter/img/site/guoji.png"/></a
+          ></span>
+          <span><a href="#">华为智慧屏</a></span>
+          <span><a href="#">电热水器</a></span>
+          <span><a href="#">马桶</a></span>
+          <span><a href="#">沙发</a></span>
+          <span><a href="#">平板电脑</a></span>
+        </div>
+      </div>
+      <!-- 图片轮播部分<-引用bootstrap框架 -->
+      <div
+        data-ride="carousel"
+        class="carousel-of-product carousel slide"
+        id="carousel-of-product"
+      >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li
+            class="active"
+            data-slide-to="0"
+            data-target="#carousel-of-product"
+          ></li>
+          <li
+            data-slide-to="1"
+            data-target="#carousel-of-product"
+            class=""
+          ></li>
+          <li
+            data-slide-to="2"
+            data-target="#carousel-of-product"
+            class=""
+          ></li>
+          <li
+            data-slide-to="3"
+            data-target="#carousel-of-product"
+            class=""
+          ></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div role="listbox" class="carousel-inner">
+          <div class="item active">
+            <img
+              src="../Public_Filter/img/lunbo/1.jpg"
+              class="carousel carouselImage"
+            />
+          </div>
+          <div class="item">
+            <img src="../Public_Filter/img/lunbo/2.jpg" class="carouselImage" />
+          </div>
+          <div class="item">
+            <img src="../Public_Filter/img/lunbo/3.jpg" class="carouselImage" />
+          </div>
+          <div class="item">
+            <img src="../Public_Filter/img/lunbo/4.jpg" class="carouselImage" />
+          </div>
+        </div>
+      </div>
+      <div class="carouselBackgroundDiv"></div>
+    </div>
+
+    <!-- css -->
+    <style>
+      .categoryWithCarousel {
+        width: 100%;
+        position: relative;
+        /* 把这个div设计为相对定位，
+        是因为在后面的carouselBackgroundDiv是居于这个div进行绝对定位的 */
+      }
+      .categoryWithCarousel .headbar {
+        /* 导航条 */
+        background-color: #dd2727;
+      }
+      .headbar .head {
+        /* 导航条左边 */
+        width: 200px;
+        background-color: #c60a0a;
+        display: inline-block;
+        line-height: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 20px;
+        color: white;
+        height: 36px;
+      }
+      .headbar .rightMenu {
+        /* 导航条左边 */
+        display: inline-block;
+        /* 设置为内联块，即可以做到不换行水平摆放，也可以设置大小 */
+      }
+
+      img.catear {
+        /* js交互功能猫耳朵特效 */
+        position: absolute;
+        display: none;
+        height: 15px;
+      }
+
+      .headbar .rightMenu a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+      }
+      .headbar .rightMenu span {
+        margin: 0 20px;
+      }
+
+      .categoryWithCarousel .rightMenu img {
+        height: 30px;
+        /*高度30px，把图片变小  */
+      }
+
+      .carousel-of-product {
+        /* 轮播模块 */
+        height: 510px;
+        width: 1024px;
+        margin: 0 auto;
+        /* 居中 */
+      }
+      .carouselImage {
+        /* 轮播中的图片 */
+        height: 510px !important;
+        /* !important优先级最高 */
+      }
+
+      .carouselBackgroundDiv {
+        /* 和图片一样颜色的背景div 
+          (当高分辨率，比如1920px的时候会看见，不然会被轮播遮挡) */
+        width: 100%;
+        height: 510px;
+        background-color: #e8e8e8;
+        /* 背景色和图片的背景色一致 */
+        position: absolute;
+        /* 绝对定位 */
+        top: 36px;
+        /* 向下移动36px */
+        z-index: -1;
+        /* 表示在轮播图片的下方 */
+      }
+    </style>
+
+    <!-- 交互js -->
+    <script>
+      $(function() {
+        $(".rightMenu span").mouseenter(function() {
+          var left = $(this).position().left; //获取左边绝对定位
+          var top = $(this).position().top;
+          var width = $(this).css("width"); //获取css 的width;
+          var destLeft = parseInt(left) + parseInt(width) / 2; //猫耳朵的突出位置
+          $("img#catear").css("left", destLeft);
+          $("img#catear").css("top", top + 32);
+          $("img#catear").fadeIn(500);
+        });
+        $(".rightMenu span").mouseleave(function() {
+          $("img#catear").hide(); //鼠标移开是隐藏
+        });
+      });
+    </script>
+  </body>
+</html>
