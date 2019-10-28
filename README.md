@@ -1,4 +1,4 @@
-# 欢迎来到超级大哈克的个人购物网站！
+# 欢迎来到 超级大哈克 的个人购物网站！
 
 
 
@@ -67,7 +67,7 @@
     <iframe
       src="../merge_lunbo_sort/merge.html"
       width="100%"
-      height="550"
+      height="750"
       frameborder="0"
       scrolling="no"
     >
@@ -79,7 +79,7 @@
     <iframe
       src="../homePage-Product_list/producelist.html"
       width="100%"
-      height="1630"
+      height="2300"
       frameborder="0"
       scrolling="no"
     >
@@ -229,7 +229,7 @@ nav.top a:hover {
 /* Search搜索栏部分 */
 
 .search a img{
-margin:190px 70px 80px 120px;
+margin:190px 70px 80px 140px;
 }
 
 .searchDiv {
