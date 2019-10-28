@@ -228,8 +228,8 @@ nav.top a:hover {
 
 /* Search搜索栏部分 */
 
-.search img{
-margin:0 0 170px 0;
+.search a img{
+margin:200px 50px 50px 100px;
 }
 
 .searchDiv {
