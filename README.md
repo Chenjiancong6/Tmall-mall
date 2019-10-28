@@ -67,7 +67,7 @@
     <iframe
       src="../merge_lunbo_sort/merge.html"
       width="100%"
-      height="750"
+      height="650"
       frameborder="0"
       scrolling="no"
     >
@@ -79,7 +79,7 @@
     <iframe
       src="../homePage-Product_list/producelist.html"
       width="100%"
-      height="2300"
+      height="2900"
       frameborder="0"
       scrolling="no"
     >
