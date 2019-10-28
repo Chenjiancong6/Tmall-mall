@@ -20,7 +20,7 @@
   <body>
     <!-- Nav页面 -->
     <nav class="top">
-      <a href="index.html">
+      <a href="http://www.chenjiancong.com/all-Page/index.html">
         <span class="glyphicon glyphicon glyphicon-home redColor"></span>
         <!--引用bootstrap图标-->
         天猫首页
@@ -227,6 +227,11 @@ nav.top a:hover {
 }
 
 /* Search搜索栏部分 */
+
+.search img{
+margin-bottom:70px;
+}
+
 .searchDiv {
   width: 400px; /*搜索栏的总长度*/
   background-color: #c40000;
