@@ -15,6 +15,10 @@
     />
     <script src="../Public_Filter/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
     <link rel="stylesheet" href="publicPage.css" />
+       <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_1359581_gebsv69wpni.css"
+    />
     <title>天猫首页页面(陈健聪)</title>
   </head>
 
@@ -208,4 +212,64 @@
       }
     });
   </script>
+     
+     <style>
+    .like {
+      position: absolute;
+      font-size: 20px;
+      color: #f60;
+    }
+  </style>
+     
+      <script>
+    //函数自执行(function(){})()
+    (function(w, d) {
+      d.addEventListener("click", function(e) {
+        addLike(e);
+      });
+      var likeArr = []; //数组小黑屋 用来管理爱心
+      function addLike(e) {
+        var odiv = d.createElement("div");
+        odiv.classList.add("like");
+        odiv.innerHTML += `<i class="iconfont icon-xihuan"></i>`;
+        d.body.appendChild(odiv);
+        likeArr.push({
+          el: odiv,
+          top: e.clientY,
+          left: e.clientX,
+          color: `rgb(${Math.random() * 256},${Math.random() *
+            256},${Math.random() * 256})`,
+          scale: 1, //指的是“缩小”和“放大"
+          opacity: 1 //设置元素的不透明级别
+        });
+        likeMore();
+      }
+
+      function likeMore() {
+        var len = likeArr.length;
+        for (i = 0; i < len; i++) {
+          likeArr[i].top--;
+          likeArr[i].scale += 0.02;
+          likeArr[i].opacity -= 0.01;
+
+          if (likeArr[i].opacity <= 0) {
+            d.body.removeChild(likeArr[i].el);
+            likeArr.splice(i, 1);
+            return;
+          }
+
+          //获取点击时在likeArr.push 的top left color 的值
+          likeArr[i].el.style.cssText = `				
+						top:${likeArr[i].top}px;
+						left:${likeArr[i].left}px; 
+						color: ${likeArr[i].color};
+						transform: scale(${likeArr[i].scale});
+						opacity: ${likeArr[i].opacity};
+					`;
+        }
+        requestAnimationFrame(likeMore);
+      }
+    })(window, document);
+  </script>
+     
 </html>
